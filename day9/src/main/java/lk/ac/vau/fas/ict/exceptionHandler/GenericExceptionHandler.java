@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import jakarta.persistence.EntityNotFoundException;
-import lk.ac.vau.fas.ict.model.ErrorResponce;
+import lk.ac.vau.fas.ict.model.ErrorResponse;
 
 @RestControllerAdvice
 public class GenericExceptionHandler {
 	
 	@ExceptionHandler(EntityNotFoundException.class)
-	public ResponseEntity<ErrorResponce> handleEntityNotFound(EntityNotFoundException exception) {
-		ErrorResponce errorResponce = new ErrorResponce(HttpStatus.NOT_FOUND.value(), 
+	public ResponseEntity<ErrorResponse> handleEntityNotFound(EntityNotFoundException exception) {
+		ErrorResponse errorResponce = new ErrorResponse(HttpStatus.NOT_FOUND.value(), 
 				exception.getMessage());
-		return new ResponseEntity<ErrorResponce>(errorResponce, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ErrorResponse>(errorResponce, HttpStatus.NOT_FOUND);
 	}
 
 }
