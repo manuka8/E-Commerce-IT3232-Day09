@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Day9Application<day9>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "lk.ac.vau.fas.ict.Day9Application",
+            "projectName": "day9",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
